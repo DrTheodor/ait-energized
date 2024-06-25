@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "aitenergized",
+  "version": "${version}",
+  "name": "aitenergized",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/DrTheodor/adventures-in-stars"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/aitenergized/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.drtheo.aitenergized.EnergizedMod"
+    ]
+  },
+  "mixins": [
+    "aitenergized.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "ait": "*"
+  }
+}

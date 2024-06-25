@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.drtheo.aitenergized.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "dev.drtheo.aitenergized.compat.EnergizedMixinPlugin",
+  "mixins": [
+    "compat.botarium.ConsoleBlockEntityMixin",
+    "compat.botarium.ExteriorBlockEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
