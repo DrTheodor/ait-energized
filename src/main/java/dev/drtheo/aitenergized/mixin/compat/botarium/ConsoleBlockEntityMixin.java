@@ -1,5 +1,6 @@
 package dev.drtheo.aitenergized.mixin.compat.botarium;
 
+import dev.drtheo.aitenergized.compat.botarium.energy.RefuelingTardisEnergyContainer;
 import dev.drtheo.aitenergized.compat.botarium.energy.TardisEnergyContainer;
 import earth.terrarium.botarium.common.energy.base.BotariumEnergyBlock;
 import earth.terrarium.botarium.common.energy.impl.WrappedBlockEnergyContainer;
@@ -26,7 +27,7 @@ public abstract class ConsoleBlockEntityMixin extends AbstractLinkableBlockEntit
             return container;
 
         return container = new WrappedBlockEnergyContainer(
-                this, new TardisEnergyContainer(
+                this, new RefuelingTardisEnergyContainer(
                 this::tardis, 1000, 1000
         ));
     }
