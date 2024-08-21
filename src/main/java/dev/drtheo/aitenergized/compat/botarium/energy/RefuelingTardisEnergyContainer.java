@@ -4,7 +4,7 @@ import loqor.ait.tardis.link.v2.TardisRef;
 
 import java.util.function.Supplier;
 
-public abstract class RefuelingTardisEnergyContainer extends TardisEnergyContainer {
+public class RefuelingTardisEnergyContainer extends TardisEnergyContainer {
 
     public RefuelingTardisEnergyContainer(Supplier<TardisRef> ref, long maxExtract, long maxInsert) {
         super(ref, maxExtract, maxInsert);
