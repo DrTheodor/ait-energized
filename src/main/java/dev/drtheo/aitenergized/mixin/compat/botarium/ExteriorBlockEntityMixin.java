@@ -16,8 +16,8 @@ public class ExteriorBlockEntityMixin extends AbstractLinkableBlockEntity implem
 
     @Unique protected WrappedBlockEnergyContainer container;
 
-    public ExteriorBlockEntityMixin(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState) {
-        super(blockEntityType, blockPos, blockState);
+    public ExteriorBlockEntityMixin(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     @Override

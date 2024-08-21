@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.Set;
 
 public class EnergizedMixinPlugin implements IMixinConfigPlugin {
+
     private static final String MIXIN_PACKAGE_ROOT = "dev.drtheo.aitenergized.mixin.compat.";
-    private final Logger logger = LogManager.getLogger("aitenergized");
+    public static final Logger LOGGER = LogManager.getLogger("aitenergized");
 
     @Override
     public void onLoad(String mixinPackage) { }
@@ -27,7 +28,7 @@ public class EnergizedMixinPlugin implements IMixinConfigPlugin {
             return true;
 
         String[] parts = mixinClassName.split("\\.");
-        return DependencyChecker.doesModExist(parts[4]);
+        return DependencyChecker.doesModExist(parts[5]);
     }
 
     @Override
