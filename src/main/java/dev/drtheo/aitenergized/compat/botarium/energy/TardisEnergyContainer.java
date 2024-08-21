@@ -52,32 +52,6 @@ public class TardisEnergyContainer implements EnergyContainer {
     }
 
     @Override
-    public long internalInsert(long maxAmount, boolean simulate) {
-        long inserted = (long) Mth.clamp(maxAmount, 0,
-                this.getMaxCapacity() - this.getStoredEnergy()
-        );
-
-        if (simulate)
-            return inserted;
-
-        this.setEnergy(this.getStoredEnergy() + inserted);
-        return inserted;
-    }
-
-    @Override
-    public long internalExtract(long maxAmount, boolean simulate) {
-        long extracted = (long) Mth.clamp(maxAmount, 0,
-                getStoredEnergy()
-        );
-
-        if (simulate)
-            return extracted;
-
-        this.setEnergy(this.getStoredEnergy() - extracted);
-        return extracted;
-    }
-
-    @Override
     public void setEnergy(long energy) {
         this.tardis().fuel().setCurrentFuel(EnergyUtil.toArtron(energy));
     }
