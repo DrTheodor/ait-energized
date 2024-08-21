@@ -4,17 +4,15 @@ import dev.drtheo.aitenergized.compat.botarium.energy.TardisEnergyContainer;
 import earth.terrarium.botarium.common.energy.base.BotariumEnergyBlock;
 import earth.terrarium.botarium.common.energy.impl.WrappedBlockEnergyContainer;
 import loqor.ait.core.blockentities.ConsoleBlockEntity;
-import loqor.ait.tardis.link.v2.AbstractLinkableBlockEntity;
-import loqor.ait.tardis.link.v2.TardisRef;
+import loqor.ait.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(ConsoleBlockEntity.class)
-public abstract class ConsoleBlockEntityMixin extends BlockEntity implements BotariumEnergyBlock<WrappedBlockEnergyContainer> {
+public abstract class ConsoleBlockEntityMixin extends AbstractLinkableBlockEntity implements BotariumEnergyBlock<WrappedBlockEnergyContainer> {
 
     @Unique protected WrappedBlockEnergyContainer container;
 
@@ -29,12 +27,7 @@ public abstract class ConsoleBlockEntityMixin extends BlockEntity implements Bot
 
         return container = new WrappedBlockEnergyContainer(
                 this, new TardisEnergyContainer(
-                this::ais$tardis, 1000, 1000
+                this::tardis, 1000, 1000
         ));
-    }
-
-    @Unique
-    private TardisRef ais$tardis() {
-        return ((AbstractLinkableBlockEntity) (Object) this).tardis();
     }
 }
