@@ -1,7 +1,6 @@
 package dev.drtheo.aitenergized.mixin.compat.botarium;
 
 import dev.drtheo.aitenergized.compat.botarium.energy.RefuelingTardisEnergyContainer;
-import dev.drtheo.aitenergized.compat.botarium.energy.TardisEnergyContainer;
 import earth.terrarium.botarium.common.energy.base.BotariumEnergyBlock;
 import earth.terrarium.botarium.common.energy.impl.WrappedBlockEnergyContainer;
 import loqor.ait.core.blockentities.ConsoleBlockEntity;
