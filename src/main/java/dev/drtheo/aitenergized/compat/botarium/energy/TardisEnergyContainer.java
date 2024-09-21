@@ -4,8 +4,8 @@ import dev.drtheo.aitenergized.util.EnergyUtil;
 import earth.terrarium.botarium.common.energy.base.EnergyContainer;
 import earth.terrarium.botarium.common.energy.base.EnergySnapshot;
 import earth.terrarium.botarium.common.energy.impl.SimpleEnergySnapshot;
-import loqor.ait.tardis.Tardis;
-import loqor.ait.tardis.link.v2.TardisRef;
+import loqor.ait.api.link.v2.TardisRef;
+import loqor.ait.core.tardis.Tardis;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
 

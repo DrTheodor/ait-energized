@@ -1,6 +1,6 @@
 package dev.drtheo.aitenergized.compat.botarium.energy;
 
-import loqor.ait.tardis.link.v2.TardisRef;
+import loqor.ait.api.link.v2.TardisRef;
 
 import java.util.function.Supplier;
 
@@ -32,7 +32,7 @@ public class RefuelingTardisEnergyContainer extends TardisEnergyContainer {
 
     @Override
     public boolean allowsInsertion() {
-        return this.tardis().fuel().getRefueling().get();
+        return this.tardis().fuel().refueling().get();
     }
 
     @Override
